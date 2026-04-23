@@ -1,0 +1,46 @@
+SERVER:
+  IP: "https://********"
+
+DOORBELL:
+  IP: "********"
+  port: '5002'
+  room: ********
+  login: "doorbell"
+
+JANUS:
+  IP: "********"
+  protocol: "ws"
+  port: '8188'
+  
+CAMERA:
+  feed: "rtsp://********:8554/cam"
+
+HA:
+  url: "http://********"
+  port: '8123'
+  token: ''   #used for authenentication
+
+WEBHOOK: 
+  doorbell-is-ringing: '********'
+  doorbell-issues: '********'
+
+HARDWARE:
+  button: 16
+  speaker: 2    #0 is default aux jack, 2 is the USB sound card
+  mic: 1        #1 is webcam mic, 2 is the USB sound card
+
+NETWORK:
+  iceservers:
+    - urls: "stun:stun.relay.metered.ca:80"
+    - urls: "turn:eu.relay.metered.ca:80"
+      username: "********"
+      credential: "********"
+    - urls: "turn:eu.relay.metered.ca:80?transport=tcp"
+      username: "********"
+      credential: "********"
+    - urls: "turn:eu.relay.metered.ca:443"
+      username: "********"
+      credential: "********"
+    - urls: "turns:eu.relay.metered.ca:443?transport=tcp"
+      username: "********"
+      credential: "********"
